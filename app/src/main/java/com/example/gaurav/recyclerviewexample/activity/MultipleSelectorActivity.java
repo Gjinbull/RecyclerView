@@ -36,15 +36,15 @@ public class MultipleSelectorActivity  extends AppCompatActivity implements Sele
     public List<Item> generateItems(){
 
         List<Item> selectableItems = new ArrayList<>();
-        selectableItems.add(new Item("cem","karaca"));
-        selectableItems.add(new Item("sezen","aksu"));
-        selectableItems.add(new Item("baris","manco"));
-        selectableItems.add(new Item("cem","karaca"));
-        selectableItems.add(new Item("sezen","aksu"));
-        selectableItems.add(new Item("baris","manco"));
-        selectableItems.add(new Item("cem","karaca"));
-        selectableItems.add(new Item("sezen","aksu"));
-        selectableItems.add(new Item("baris","manco"));
+        selectableItems.add(new Item("Gaurav","Gupta"));
+        selectableItems.add(new Item("Saurabh","Verma"));
+        selectableItems.add(new Item("Ram","Sharma"));
+        selectableItems.add(new Item("Rohan","Singh"));
+        selectableItems.add(new Item("Rajat","Porwal"));
+        selectableItems.add(new Item("Nitin","Yadav"));
+        selectableItems.add(new Item("Sachin","Saini"));
+        selectableItems.add(new Item("Ankur","Jain"));
+        selectableItems.add(new Item("Rajat","Porwal"));
 
         return selectableItems;
     }
