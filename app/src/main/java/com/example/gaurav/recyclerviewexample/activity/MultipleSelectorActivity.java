@@ -56,4 +56,9 @@ public class MultipleSelectorActivity  extends AppCompatActivity implements Sele
         Toast.makeText(getApplicationContext(),"Selected item is "+selectableItem.getName()+
                 ", Totally  selectem item count is "+selectedItems.size(),Toast.LENGTH_LONG).show();
     }
+
+    private void newMethod()
+    {
+        String test = "Test";
+    }
 }
