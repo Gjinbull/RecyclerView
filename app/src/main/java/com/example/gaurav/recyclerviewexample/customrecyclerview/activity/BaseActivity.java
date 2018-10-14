@@ -1,4 +1,4 @@
-package com.example.gaurav.recyclerviewexample.activity;
+package com.example.gaurav.recyclerviewexample.customrecyclerview.activity;
 
 import android.support.v7.app.AppCompatActivity;
 
