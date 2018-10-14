@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.gaurav.recyclerviewexample.R;
-import com.example.gaurav.recyclerviewexample.activity.BaseActivity;
 import com.example.gaurav.recyclerviewexample.customrecyclerview.adapter.CustomAdapter;
 import com.example.gaurav.recyclerviewexample.customrecyclerview.interfaces.ClickListener;
 import com.example.gaurav.recyclerviewexample.customrecyclerview.model.CustomDataModel;
