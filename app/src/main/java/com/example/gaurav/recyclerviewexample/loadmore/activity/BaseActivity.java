@@ -1,4 +1,4 @@
-package com.example.gaurav.recyclerviewexample.activity;
+package com.example.gaurav.recyclerviewexample.loadmore.activity;
 
 import android.support.v7.app.AppCompatActivity;
 
