@@ -1,4 +1,4 @@
-package com.example.gaurav.recyclerviewexample.customRecyclerView.adapter;
+package com.example.gaurav.recyclerviewexample.customrecyclerview.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.gaurav.recyclerviewexample.R;
-import com.example.gaurav.recyclerviewexample.customRecyclerView.model.CustomDataModel;
+import com.example.gaurav.recyclerviewexample.customrecyclerview.model.CustomDataModel;
 
 import java.util.ArrayList;
 
@@ -25,13 +25,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_custom_data,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_custom_data, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.userName.setText(dataModelArrayList.get(position).getName());
+        CustomDataModel customDataModel = dataModelArrayList.get(position);
+        holder.userName.setText(customDataModel.getName());
+        holder.content.setText(customDataModel.getContent());
+        holder.date.setText(customDataModel.getDate());
     }
 
     @Override
@@ -41,15 +44,25 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivPicture;
-        TextView userName;
+        TextView userName,content,date;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivPicture = itemView.findViewById(R.id.ivPicture);
             userName = itemView.findViewById(R.id.user_name);
+            content = itemView.findViewById(R.id.content);
+            date = itemView.findViewById(R.id.date);
         }
     }
 
     public void setContentListData(ArrayList<CustomDataModel> dataModelArrayList) {
+        this.dataModelArrayList = dataModelArrayList;
+        notifyItemRangeChanged(0, dataModelArrayList.size());
+    }
+
+    public void removeAt(int posiiton) {
+        dataModelArrayList.remove(posiiton);
+        notifyItemChanged(posiiton);
         notifyItemRangeChanged(0, dataModelArrayList.size());
     }
 }

@@ -1,4 +1,4 @@
-package com.example.gaurav.recyclerviewexample.customRecyclerView.model;
+package com.example.gaurav.recyclerviewexample.customrecyclerview.model;
 
 public class CustomDataModel {
     String name;
